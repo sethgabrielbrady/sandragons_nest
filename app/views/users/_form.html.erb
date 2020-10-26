@@ -22,6 +22,10 @@
         <%= f.label :password_confirmation, "Confirm Password" %>
         <%= f.password_field :password_confirmation, size: 40 %>
       </li>
+      <li>
+        <%= f.label "Profile Photo" %>
+        <%= f.file_field :avatar %>
+      </li>
     </ol>
     <p>
       <% if @user.new_record? %>

@@ -1,8 +1,11 @@
 <article id="user">
-  <header>
-    <h1><%= @user.name %></h1>
-    <h2><%= mail_to(@user.email) %></h2>
-  </header>
+    <div>
+      <% if @user.avatar.attached? %>
+        <image src="<%=(url_for(@user.avatar))%>" width="80px" style="display:inline-block; border-radius: 50%;">
+      <% end %>
+      <h1 style="display:inline-block; margin-top: 0px; transform: translateY(-32px);"><%= @user.name %></h1>
+      <h2><%= mail_to(@user.email) %></h2>
+    </div>
 </article>
 
 <footer>

@@ -1,14 +1,17 @@
-<nav>
-  <p>
-    <%= link_to 'Sandragon', root_path, class: 'button' %>
-    <% if current_user %>
-      <%= link_to current_user.name, current_user %>
-      <%= link_to "Account Settings", edit_user_path(current_user) %>
-      <%= link_to 'Sign Out', session_path, method: :delete, class: 'button' %>
-    <% else %>
-      <%= link_to 'Sign Up', signup_path, class: 'button' %>
-      <%= link_to 'Sign In', new_session_path, class: 'button' %>
-    <% end %>
-  </p>
-</nav>
-<hr>
+<header>
+  <nav style="background-color:#0F102F; padding: .5rem; 1.5rem">
+    <p style="display:inline-block;">
+      <%= link_to 'Sandragon', root_path, class: 'button', style:'font-size: 1.5rem;' %>
+    </p>
+    <p style="float:right; display:inline-block;">
+      <% if current_user %>
+        <%= link_to current_user.name, current_user %>
+        <%= link_to "Account Settings", edit_user_path(current_user) %>
+        <%= link_to 'Sign Out', session_path, method: :delete, class: 'button' %>
+      <% else %>
+        <%= link_to 'Sign Up', signup_path, class: 'button' %>
+        <%= link_to 'Sign In', new_session_path, class: 'button' %>
+      <% end %>
+    </p>
+  </nav>
+</header>
